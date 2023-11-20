@@ -76,6 +76,20 @@ while (1)
 #define WOBJLOG2	(*(vuint8 *)0x212B)
 #define CGADSUB 	(*(vuint8 *)0x2131) 
 
+// Handy function to wait until scanline sl
+
+void WaitTilScanline(u8 sl) // sl = scanline to wait til
+{
+	(*(vuint8*)0x4201) = 128; // enable h/vcounters to latch
+	while (1)
+	{
+		u8 lr = (*(vuint8*)0x2137); // latch h/vcounters into 213C and 213D
+		u16 res = (*(vuint8*)0x213D); // read vcounter - 2 reads - 9 bits in total
+		res = res | ((*(vuint8*)0x213D) & 3) << 8; // hibyte is 2 bits so mask em out
+		if (res == sl) return;
+	}
+}
+
 
 #ifdef PROFILE_ENABLE
 // Turn on the profile display
