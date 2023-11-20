@@ -11,4 +11,5 @@ Example in game:
 
 ToDo:
 
-Need a simple system to profile code in VBlank and display that. Also some handy "WaitTilScanlineZero" code would be great.
+Need a simple system to profile code in VBlank and display that. 
+~~Also some handy "WaitTilScanlineZero" code would be great.~~
