@@ -8,3 +8,7 @@ How it works:
 usage:
 
 Example in game:
+
+ToDo:
+
+Need a simple sytem to profile code in VBlank and display that. Also some handy "WaitTilScanlineZero" code would be great.
