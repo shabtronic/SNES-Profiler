@@ -3,11 +3,11 @@ A very simple profiler for SNES code
 
 Written for use with the fantastic PVSNESLIB:  https://github.com/alekmaul/pvsneslib
 
-How it works:
+**How it works:**
 
 
 
-usage:
+**Usage:**
 
 This is code from the ProfileNTSC.sfc example
 
@@ -47,7 +47,7 @@ This is code from the ProfileNTSC.sfc example
 	}
 ```
 
-Example in game:
+**Example in game:**
 
 The bar colours are from the code above. The yellow bar is the VBlank code usage - where full screen width equals all VBlank cpu time. (it's not very accurate tho)
 
