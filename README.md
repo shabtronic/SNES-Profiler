@@ -9,7 +9,7 @@ Written for use with the fantastic PVSNESLIB:  https://github.com/alekmaul/pvsne
 
 **Usage:**
 
-This is code from the ProfileNTSC.sfc example
+This is the code from the ProfileNTSC.sfc example
 
 ```
 	InitProfiler();
