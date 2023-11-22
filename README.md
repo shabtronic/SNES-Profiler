@@ -54,6 +54,6 @@ The bar colours are from the code above. The yellow bar is the VBlank code usage
 ![](./Images/ProfileNTSC_Animated.gif)
 
 ToDo:
-
+Audio profiling? - ugh lol!
 ~~Need a simple system to profile code in VBlank and display that.~~ 
 ~~Also some handy "WaitTilScanlineZero" code would be great.~~
