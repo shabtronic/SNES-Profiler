@@ -51,7 +51,7 @@ Example in game:
 
 The bar colours are from the above code. The yellow bar is the VBlank code usage - where full screen width equals all VBlank cpu time. (it's not very accurate tho)
 
-![](./Images/ProfileNTSC.png)
+![](./Images/ProfileNTSC_Animated.gif)
 
 ToDo:
 
