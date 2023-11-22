@@ -55,5 +55,5 @@ The bar colours are from the above code. The yellow bar is the VBlank code usage
 
 ToDo:
 
-Need a simple system to profile code in VBlank and display that. 
+~~Need a simple system to profile code in VBlank and display that.~~ 
 ~~Also some handy "WaitTilScanlineZero" code would be great.~~
