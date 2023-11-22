@@ -7,14 +7,16 @@ Written for use with the fantastic PVSNESLIB:  https://github.com/alekmaul/pvsne
 
 This uses window 2 to draw the bars at X positions 8 thru to 12 using the REG_COLDATA register. ProfileColour just sets the REG_COLDATA to whatever you like and that reflects on screen at the current scanline.
 
-The VBlank profiler - works by getting the current scanline using the ReadVCounter() after the WaitForVBlank() function. And thus you can calculate how many scanlines any VBlank has taken.
+The VBlank profiler - works by getting the current scanline using the ReadVCounter() after the WaitForVBlank() function. And thus you can calculate how many scanlines any VBlank code has taken.
 Window2 is then used to draw a yellow profile bar at ypos 220 to 224, with the width representing how much code time was used in VBlank.
 
-All of this relies on two things:
+All of this relies on three things:
 
 1) Mode 1 is being used
 2) Frame time is alway less than 60fps - if you go over a frame, it'll probably draw a horrible mess and slow your game down since there's a waitforscanline function being used.
+3) Windows are not being used.
 
+It's probably possible to write a similar system without using the window functionality. Something like using a blank tile in BG3 ui and changing that tiles palette colour. 
 
 **Usage:**
 
