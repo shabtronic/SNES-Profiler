@@ -9,6 +9,8 @@ usage:
 
 Example in game:
 
+![](./Images/ProfileNTSC.png)
+
 ToDo:
 
 Need a simple system to profile code in VBlank and display that. 
