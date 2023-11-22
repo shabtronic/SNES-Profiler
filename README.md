@@ -5,7 +5,12 @@ Written for use with the fantastic PVSNESLIB:  https://github.com/alekmaul/pvsne
 
 How it works:
 
+
+
 usage:
+
+This is code from the ProfileNTSC.sfc example
+
 ```
 	InitProfiler();
 	setScreenOn();
@@ -24,9 +29,9 @@ usage:
 		oamDynamic16Draw(TestSprite);
 
 		ProfileColour(profDARKBLUE);
-    SpritePathFollow();
-    
+    		SpritePathFollow();    
 		bgSetScroll(1, CameraXPos >> 6, 0);
+
 		ProfileColour(profRED);
 		mapUpdate();
 
@@ -34,7 +39,7 @@ usage:
 		oamInitDynamicSpriteEndFrame();
 		ProfilerOff();
 
-		VBlankProfile(); // profile any vblank cpu usage
+		VBlankProfile(); // must put this here, profile any vblank cpu usage
 		WaitForVBlank();
 
 		oamVramQueueUpdate(); // uploads any sprite tiles needed
