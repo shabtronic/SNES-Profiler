@@ -6,6 +6,41 @@ Written for use with the fantastic PVSNESLIB:  https://github.com/alekmaul/pvsne
 How it works:
 
 usage:
+```
+	InitProfiler();
+	setScreenOn();
+
+	while (1)
+	{
+		StartProfiler();
+		ProfileColour(profOLIVE);
+		CameraUpdate();
+
+		ProfileColour(profBLUE);
+		ShipUpdate(0);
+
+		ProfileColour(profGREY);
+		oamDynamic32Draw(PlayerShip);
+		oamDynamic16Draw(TestSprite);
+
+		ProfileColour(profDARKBLUE);
+    SpritePathFollow();
+    
+		bgSetScroll(1, CameraXPos >> 6, 0);
+		ProfileColour(profRED);
+		mapUpdate();
+
+		ProfileColour(profGREY);
+		oamInitDynamicSpriteEndFrame();
+		ProfilerOff();
+
+		VBlankProfile(); // profile any vblank cpu usage
+		WaitForVBlank();
+
+		oamVramQueueUpdate(); // uploads any sprite tiles needed
+		mapVblank(); // Draws the map
+	}
+```
 
 Example in game:
 
