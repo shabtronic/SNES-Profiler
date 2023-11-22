@@ -74,7 +74,7 @@ u16 ReadVCounter()
 {
 	u16 res = (*(vuint8*)0x2137); // latch h/vcounters into 213C and 213D - this value is discarded 
 	res = ((*(vuint8*)0x213D)); // read vcounter - 2 reads - 9 bits in total, top 7 bits are open bus
-	res = res | ((((u16)(*(vuint8*)0x213D))&1)<<8); // hibyte is 2 bits so mask em out
+	res = res | ((((u16)(*(vuint8*)0x213D))&1)<<8); // hibyte is 1 bit so mask it out
 	return res;
 }
 
